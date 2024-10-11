@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Welcome to My Flask App</h1>
+    <p>This is an introduction to my Flask application.</p>
+    <img src="{{ url_for('static', filename='LAPD-AREA-STATION-MAP.jpg') }}" alt="My Image" style="width:300px;height:auto;">
+    <h2>Available Routes:</h2>
+    <ul>
+        {% for route in routes %}
+            <li><a href="{{ route.link }}">{{ route.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
